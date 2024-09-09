@@ -1,0 +1,204 @@
+<html><head><base href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios - Dr. Julio Cardona - Endodoncista</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background-color: #1a5f7a;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #2e86ab;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f0f4f8;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        h2 {
+            color: #1a5f7a;
+            border-bottom: 2px solid #2e86ab;
+            padding-bottom: 10px;
+        }
+        .schedule {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .day {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .day h3 {
+            color: #2e86ab;
+            margin-top: 0;
+        }
+        .hours {
+            font-size: 1.1rem;
+        }
+        .appointment-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px;
+            background-color: #2e86ab;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .appointment-btn:hover {
+            background-color: #1a5f7a;
+        }
+        #emergencyNotice {
+            background-color: #ffebee;
+            border: 1px solid #ffcdd2;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 20px;
+            color: #b71c1c;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Dr. Julio Cardona - Endodoncista</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="tarifas.html">Tarifas</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Horarios de Atención</h2>
+        <p>En la clínica del Dr. Julio Cardona, nos esforzamos por ofrecer horarios flexibles para adaptarnos a las necesidades de nuestros pacientes. A continuación, encontrará nuestro horario regular de atención:</p>
+        
+        <div class="schedule">
+            <div class="day">
+                <h3>Lunes a Viernes</h3>
+                <p class="hours">8:00 AM - 6:00 PM</p>
+                
+            </div>
+            
+            <div class="day">
+                <h3>Sábados</h3>
+                <p class="hours">8:00 AM - 2:00 PM</p>
+            </div>
+            <div class="day">
+                <h3>Domingos</h3>
+                <p class="hours">Cerrado</p>
+            </div>
+        </div>
+
+        <p>Tenga en cuenta que estos horarios pueden estar sujetos a cambios en días festivos o por circunstancias especiales. Siempre recomendamos confirmar su cita con anticipación.</p>
+
+        <div id="emergencyNotice">
+            <h3>Atención de Emergencias</h3>
+            <p>Para casos de emergencia fuera del horario regular, contamos con un servicio de atención las 24 horas. Por favor, llame a nuestro número de emergencia: <strong>+57 (318) 595-5568</strong>.</p>
+        </div>
+
+        <h3>Política de Citas</h3>
+        <ul>
+            <li>Se recomienda programar su cita con al menos 24 horas de anticipación.</li>
+            <li>En caso de no poder asistir, le agradecemos cancelar o reprogramar su cita con un mínimo de 12 horas de antelación.</li>
+            <li>Para citas de primera vez, por favor llegue 15 minutos antes para completar los formularios necesarios.</li>
+        </ul>
+
+        <a href="https://wa.me/+573185955568" class="appointment-btn" id="appointmentBtn">Agendar una Cita</a>
+    </main>
+/*
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const appointmentBtn = document.getElementById('appointmentBtn');
+            
+            appointmentBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Aquí podrías implementar la lógica para abrir un modal de citas
+                // o redirigir a una página de reserva de citas
+                alert('¡Gracias por su interés! Nuestro sistema de citas en línea estará disponible próximamente. Por favor, llame al +57 (318) 595-5568 para agendar su cita.');
+            });
+
+            // Función para actualizar los horarios dinámicamente (ejemplo)
+            function actualizarHorarios() {
+                // Aquí podrías implementar una lógica para actualizar los horarios
+                // basándote en datos del servidor o cambios estacionales
+                console.log('Horarios actualizados');
+            }
+
+            // Simular actualización de horarios cada semana
+            setInterval(actualizarHorarios, 7 * 24 * 60 * 60 * 1000);
+
+            // Función para mostrar avisos de horarios especiales
+            function mostrarAvisoEspecial() {
+                const hoy = new Date();
+                // Ejemplo: Mostrar aviso especial para los sábados
+                if (hoy.getDay() === 6) { // 6 representa el sábado
+                    const aviso = document.createElement('p');
+                    aviso.textContent = '¡Atención! Hoy sábado tenemos horario especial de 10:00 AM a 3:00 PM.';
+                    aviso.style.color = '#1a5f7a';
+                    aviso.style.fontWeight = 'bold';
+                    document.querySelector('.schedule').appendChild(aviso);
+                }
+            }
+
+            mostrarAvisoEspecial();
+        });
+    </script>
+    */
+</body>
+</html>
